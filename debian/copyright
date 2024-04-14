@@ -1,0 +1,6 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0
+Upstream-Name: device-google-kukui
+Source: https://github.com/00p513-dev/device-google-kukui
+Files: *
+Maintainer: Amy <amy@amyrom.tech>
+License: MIT

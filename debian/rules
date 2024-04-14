@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+# Define the package name
+PACKAGE_NAME := device-google-kukui
+
+# Main target - build the package
+%:
+	dh $@
+
+# Main target - install the package
+override_dh_auto_install:
+	dh_installdirs
+	
+	cp -pvr overlay/ debian/$(PACKAGE_NAME)/
+
+# Indicate that these targets are not files
+.PHONY: override_dh_auto_install

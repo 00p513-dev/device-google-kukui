@@ -1,0 +1,26 @@
+deviceinfo_name="Google Chromebook (MT8183)"
+deviceinfo_manufacturer="Google"
+deviceinfo_codename="google-kukui"
+deviceinfo_year="2020"
+deviceinfo_dtb="mediatek/mt8183-kukui*"
+deviceinfo_arch="aarch64"
+deviceinfo_chassis="convertible"
+
+deviceinfo_kernel_source="https://github.com/00p513-dev/linux"
+deviceinfo_kernel_source_branch="v6.6.25-mt8183"
+deviceinfo_kernel_defconfig="mt8183_defconfig"
+deviceinfo_has_recovery_partition="false"
+
+deviceinfo_cgpt_kpart="/boot/vmlinuz.kpart"
+deviceinfo_cgpt_kpart_start="8192"
+deviceinfo_cgpt_kpart_size="65536"
+# We are supposed to use "kukui" board here, but lazor dts does
+# not include kukui compatible which results in loading a wrong
+# dtb. "mt8183" board may result in including dtbs that are for
+# mt8183 but not related to Chrome OS devices which would increase
+# image size. This doesn't happen for us because we provide only 
+# dtbs from deviceinfo_dtb variable and nothing more, so use "mt8183"
+# board here.
+deviceinfo_depthcharge_board="mt8183"
+deviceinfo_generate_depthcharge_image="true"
+
