@@ -7,6 +7,6 @@ Standards-Version: 3.9.4
 Homepage: https://ubuntu-touch.io
 
 Package: device-google-kukui
-Depends: linux-image-6.6.25-mt8183+
+Depends: linux-image-6.6.25-mt8183+, alsa-ucm-conf-cros, depthcharge-tools, soc-mediatek-mt8183
 Architecture: arm64
 Description: Device package for mt8183 ChromeOS devices
